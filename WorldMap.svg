@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-label="Global network map">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1">
+      <stop offset="0%" stop-color="#f8fbff"/>
+      <stop offset="100%" stop-color="#edf6ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)"/>
+  <g fill="none" stroke="#b7d5f0" stroke-width="2">
+    <path d="M172 170c80-80 180-110 287-96 92 12 170 85 250 101 135 27 256-39 365-12 69 17 112 59 144 122-32 32-72 58-122 70-104 25-182 72-288 83-131 14-264-38-387-53-40-5-79-7-122-4-31 2-55 4-81 12-23 7-47 16-72 6-17-7 4-91 21-129 18-36 53-68 89-100z"/>
+    <path d="M103 265c73 37 108 84 154 118 34 25 73 39 118 48 61 14 113 16 175 27 90 16 145 47 206 104 22 20 42 46 69 61"/>
+    <path d="M610 120l-18 91-92 20-72 95 18 129 96 60 120-22 90-83 75-18 35-122-28-117-90-61-135-28-39 35z"/>
+  </g>
+  <g fill="#dfeefd" stroke="#93c5fd" stroke-width="2">
+    <circle cx="200" cy="270" r="12"/>
+    <circle cx="430" cy="200" r="16"/>
+    <circle cx="530" cy="385" r="14"/>
+    <circle cx="720" cy="270" r="18"/>
+    <circle cx="880" cy="470" r="16"/>
+    <circle cx="1015" cy="210" r="13"/>
+  </g>
+  <g fill="#3a9fe0">
+    <circle cx="200" cy="270" r="5"/>
+    <circle cx="430" cy="200" r="6"/>
+    <circle cx="530" cy="385" r="5"/>
+    <circle cx="720" cy="270" r="6"/>
+    <circle cx="880" cy="470" r="6"/>
+    <circle cx="1015" cy="210" r="5"/>
+  </g>
+  <g fill="#ffffff" font-family="Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle">
+    <text x="200" y="244">A</text>
+    <text x="430" y="176">B</text>
+    <text x="530" y="360">C</text>
+    <text x="720" y="245">D</text>
+    <text x="880" y="445">E</text>
+    <text x="1015" y="188">F</text>
+  </g>
+</svg>

@@ -1,114 +1,419 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Primary SEO -->
     <title>AllRounder — Post & Find Local Jobs, Services & Talent Near You</title>
-    <meta name="description" content="AllRounder is a free app to post jobs, hire trusted local professionals, and grow your service business. Find workers near you with GPS matching, built-in chat, secure payments, and verified profiles." />
-    <meta name="keywords" content="post job online, hire local professionals, find workers near me, local service app, GPS job matching, local talent hiring, freelance services India, daily wage workers, skilled workers app, home services app, job posting app India" />
+    <meta name="description" content="AllRounder is a free app to post jobs, hire trusted local professionals, and grow your service business." />
+    <meta name="keywords" content="post job online, hire local professionals, find workers near me, local service app, GPS job matching" />
     <meta name="author" content="AllRounder" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://allrounderapp.com/" />
-    <meta name="google-site-verification" content="DOFfeOSwYt93QyUQUa_wlIjm5aGeiJxUVORQCzRNrEM" />
-
-    <!-- Open Graph / Facebook / LinkedIn -->
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="AllRounder" />
-    <meta property="og:title" content="AllRounder — Post & Find Local Jobs, Services & Talent Near You" />
-    <meta property="og:description" content="AllRounder is a free app to post jobs, hire trusted local professionals, and grow your service business. GPS matching, built-in chat, secure payments, verified profiles." />
-    <meta property="og:url" content="https://allrounderapp.com/" />
-    <meta property="og:image" content="https://allrounderapp.com/og-image.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:locale" content="en_IN" />
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="AllRounder — Post & Find Local Jobs, Services & Talent Near You" />
-    <meta name="twitter:description" content="AllRounder is a free app to post jobs, hire trusted local professionals, and grow your service business. GPS matching, built-in chat, secure payments, verified profiles." />
-    <meta name="twitter:image" content="https://allrounderapp.com/og-image.png" />
-
-    <!-- Mobile / PWA -->
     <meta name="theme-color" content="#3A9FE0" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <meta name="apple-mobile-web-app-title" content="AllRounder" />
-
-    <!-- Icons -->
-    <link rel="icon" type="image/png" href="/LOGO.png" />
-    <link rel="apple-touch-icon" href="/LOGO.png" />
-
-    <!-- JSON-LD: Organization -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "AllRounder",
-      "url": "https://allrounderapp.com",
-      "logo": "https://allrounderapp.com/LOGO.png",
-      "description": "AllRounder is a local job and service marketplace app. Post jobs, find trusted nearby professionals, chat in-app, and pay securely.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Chinsurah",
-        "addressRegion": "West Bengal",
-        "addressCountry": "IN"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer support",
-        "url": "https://allrounderapp.com/contact"
-      },
-      "sameAs": [
-        "https://play.google.com/store/apps/details?id=com.Allrounder.App"
-      ]
-    }
-    </script>
-
-    <!-- JSON-LD: MobileApplication -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MobileApplication",
-      "name": "AllRounder",
-      "operatingSystem": "ANDROID",
-      "applicationCategory": "BusinessApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "INR"
-      },
-      "url": "https://play.google.com/store/apps/details?id=com.Allrounder.App",
-      "description": "Post jobs with photos, find nearby professionals using GPS, chat in-app, and pay securely. Free for all users.",
-      "featureList": "GPS-based job matching, In-app chat, Secure payments, Job posting with photos, Verified professional profiles, Reviews and ratings",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.5",
-        "ratingCount": "1100"
-      }
-    }
-    </script>
-
-    <script>
-      // Restore path redirected by 404.html for GitHub Pages SPA routing
-      (function () {
-        var params = new URLSearchParams(window.location.search);
-        var p = params.get('p');
-        if (p) {
-          params.delete('p');
-          var remaining = params.toString();
-          window.history.replaceState(
-            null, null,
-            p + (remaining ? '?' + remaining : '') + window.location.hash
-          );
-        }
-      })();
-    </script>
+    <link rel="canonical" href="https://allrounderapp.com/" />
+    <link rel="icon" type="image/png" href="public/LOGO.png" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <header class="site-header transparent">
+      <div class="container nav">
+        <a class="brand" href="index.html" aria-label="AllRounder home">
+          <img src="public/LOGO.png" alt="AllRounder Logo" />
+          <span class="brand-text">
+            <strong>ALLROUNDER</strong>
+            <span>Connecting Skills with Needs</span>
+          </span>
+        </a>
+
+        <button class="nav-toggle" aria-label="Open menu">☰</button>
+
+        <nav class="main-nav" id="site-nav">
+          <a href="index.html" class="active">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="terms-conditions.html">Terms &amp; Conditions</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <a class="primary-btn header-cta" href="https://wa.me/919330093620" target="_blank" rel="noreferrer">Help Center</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-copy">
+            <h1>Post &amp; find Your Job Everything in one App</h1>
+            <p>A smart platform to discover local talent, post quick jobs, and grow your service network.</p>
+
+            <div class="hero-actions">
+              <a class="store-button" href="https://play.google.com/store/apps/details?id=com.Allrounder.App" target="_blank" rel="noreferrer">
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M5.4 6.1C5.1 6.4 5 6.9 5 7.6V40.4C5 41.1 5.1 41.6 5.4 41.9L5.5 42L24.8 22.7L24.8 22.5V22.4L5.5 3L5.4 6.1Z" fill="#32A071"/><path d="M30.4 28.3L24.8 22.7L24.8 22.4L30.4 16.8L30.5 16.9L37.1 20.6C39 21.7 39 23.4 37.1 24.5L30.5 28.2L30.4 28.3Z" fill="#F8BA26"/><path d="M30.5 28.2L24.8 22.5L5.4 42C5.9 42.4 6.6 42.5 7.5 42L30.5 28.2Z" fill="#E8443B"/><path d="M30.5 16.9L7.5 3C6.6 2.5 5.9 2.6 5.4 3.1L24.8 22.5L30.5 16.9Z" fill="#1877F2"/></svg>
+                </span>
+                <span>
+                  <small>Download Now</small>
+                  <strong>Google Play</strong>
+                </span>
+              </a>
+
+              <div class="social-proof">
+                <strong>1.1k+</strong>
+                <div class="stars" aria-label="4 star rating">
+                  <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                  <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                  <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                  <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                </div>
+                <span>Active User</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <img src="src/assets/home/MobileHero.webp" alt="AllRounder App" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section features-section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="pill">Features</span>
+            <h2>Features That Makes app Dfferents</h2>
+            <p>Built with powerful features to simplify every step — from posting to payment.</p>
+          </div>
+
+          <div class="features-layout">
+            <div class="features-side left">
+              <div class="feature-card">
+                <div class="icon-box">📍</div>
+                <div>
+                  <h3>Location-Based Matching</h3>
+                  <p>Find nearby professionals or jobs instantly using GPS-based search.</p>
+                </div>
+              </div>
+              <div class="feature-card">
+                <div class="icon-box">🔒</div>
+                <div>
+                  <h3>Secure Payments</h3>
+                  <p>Smooth and safe payment flow between clients and workers.</p>
+                </div>
+              </div>
+              <div class="feature-card">
+                <div class="icon-box">🌙</div>
+                <div>
+                  <h3>Light &amp; Dark Mode</h3>
+                  <p>Switch between light and dark themes for a comfortable viewing experience.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="phone-core">
+              <img src="src/assets/home/FeaturesMobile.webp" alt="App features interface" />
+            </div>
+
+            <div class="features-side right">
+              <div class="feature-card">
+                <div class="icon-box">💬</div>
+                <div>
+                  <h3>Like, Comment &amp; Share</h3>
+                  <p>Engage with posts, share opportunities, and build your local network.</p>
+                </div>
+              </div>
+              <div class="feature-card">
+                <div class="icon-box">📷</div>
+                <div>
+                  <h3>Post Jobs with Photos</h3>
+                  <p>Add images or short clips to make your job posts more descriptive.</p>
+                </div>
+              </div>
+              <div class="feature-card">
+                <div class="icon-box">👤</div>
+                <div>
+                  <h3>Personalized Profile</h3>
+                  <p>Add your skills, work history, and portfolio to attract more jobs.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section global-network">
+        <div class="container network-wrap">
+          <div class="map-panel">
+            <img src="WorldMap.svg" alt="World Map" />
+
+            <div class="map-pin" style="top: 20%; left: 10%;">
+              <div class="avatar"><img src="https://i.pravatar.cc/150?img=1" alt="User" /></div>
+              <div class="pointer"></div>
+              <div class="dot-wrap"><span class="pulse"></span><span class="dot"></span></div>
+            </div>
+            <div class="map-pin" style="top: 10%; left: 40%;">
+              <div class="avatar"><img src="https://i.pravatar.cc/150?img=2" alt="User" /></div>
+              <div class="pointer"></div>
+              <div class="dot-wrap"><span class="pulse"></span><span class="dot"></span></div>
+            </div>
+            <div class="map-pin" style="top: 30%; left: 35%;">
+              <div class="avatar"><img src="https://i.pravatar.cc/150?img=3" alt="User" /></div>
+              <div class="pointer"></div>
+              <div class="dot-wrap"><span class="pulse"></span><span class="dot"></span></div>
+            </div>
+            <div class="map-pin" style="top: 45%; left: 55%;">
+              <div class="avatar"><img src="https://i.pravatar.cc/150?img=4" alt="User" /></div>
+              <div class="pointer"></div>
+              <div class="dot-wrap"><span class="pulse"></span><span class="dot"></span></div>
+            </div>
+            <div class="map-pin" style="top: 38%; left: 80%;">
+              <div class="avatar"><img src="https://i.pravatar.cc/150?img=5" alt="User" /></div>
+              <div class="pointer"></div>
+              <div class="dot-wrap"><span class="pulse"></span><span class="dot"></span></div>
+            </div>
+            <div class="map-pin" style="top: 70%; left: 85%;">
+              <div class="avatar"><img src="https://i.pravatar.cc/150?img=6" alt="User" /></div>
+              <div class="pointer"></div>
+              <div class="dot-wrap"><span class="pulse"></span><span class="dot"></span></div>
+            </div>
+          </div>
+
+          <div class="network-copy">
+            <h2>Building a World Where Everyone Can Work Together</h2>
+            <p>Join a growing network of clients and professionals changing how local jobs get done.</p>
+
+            <div class="stats-list">
+              <div class="stat-item">
+                <div class="stat-icon">✓</div>
+                <div>5K+ Verified Professionals</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-icon">★</div>
+                <div>4.8★ User Satisfaction</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-icon">▣</div>
+                <div>1000+ Jobs Posted Daily</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section success-section">
+        <div class="container success-wrap">
+          <div class="success-copy">
+            <span class="pill">Reviews</span>
+            <h2>Success on All Rounder</h2>
+            <p>Thousands of users trust All Rounder to find jobs, clients, and success.</p>
+
+            <div class="review-score-row">
+              <div class="store-score">
+                <div class="store-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M15.4 10.6c-.1-2 1.6-3.2 1.7-3.2-1.3-1.9-3.2-2.1-3.9-2.2-1.6-.2-3.3 1-4.2 1-.9 0-2.3-1-3.6-1-1.9 0-3.6 1.1-4.6 2.8-2 3.6-.5 8.9 1.4 11.7 1 1.4 2.1 3 3.6 3 1.4-.1 2-1 3.7-1 1.7 0 2.2 1 3.7 1 1.5.1 2.5-1.4 3.5-2.8 1.2-1.7 1.6-3.3 1.7-3.4-.1-.1-2.9-1.1-3-3.9zm-2.4-6.3c.8-.9 1.3-2.2 1.1-3.4-1.2.1-2.6.7-3.4 1.6-.7.8-1.3 2-1.1 3.3 1.3.1 2.5-.5 3.4-1.5z"/></svg>
+                </div>
+                <div class="meta">
+                  <div class="stars">
+                    <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                    <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                    <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                    <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                  </div>
+                  <span>Active User</span>
+                  <strong>5.4k+</strong>
+                </div>
+              </div>
+
+              <div class="store-score">
+                <div class="store-icon">
+                  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M5.4 6.1C5.1 6.4 5 6.9 5 7.6V40.4C5 41.1 5.1 41.6 5.4 41.9L5.5 42L24.8 22.7L24.8 22.5V22.4L5.5 3L5.4 6.1Z" fill="#32A071"/>
+                    <path d="M30.4 28.3L24.8 22.7L24.8 22.4L30.4 16.8L30.5 16.9L37.1 20.6C39 21.7 39 23.4 37.1 24.5L30.5 28.2L30.4 28.3Z" fill="#F8BA26"/>
+                    <path d="M30.5 28.2L24.8 22.5L5.4 42C5.9 42.4 6.6 42.5 7.5 42L30.5 28.2Z" fill="#E8443B"/>
+                    <path d="M30.5 16.9L7.5 3C6.6 2.5 5.9 2.6 5.4 3.1L24.8 22.5L30.5 16.9Z" fill="#1877F2"/>
+                  </svg>
+                </div>
+                <div class="meta">
+                  <div class="stars">
+                    <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                    <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                    <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                    <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                  </div>
+                  <span>Active User</span>
+                  <strong>1.1k+</strong>
+                </div>
+              </div>
+            </div>
+
+            <a class="secondary-btn" href="#">See Review on app store</a>
+          </div>
+
+          <div class="reviews-grid">
+            <div class="review-card">
+              <div class="review-avatar"></div>
+              <div class="review-content">
+                <div class="stars">
+                  <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                  <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                  <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                  <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                </div>
+                <p>Love the app! Simple, clean, and super fast to connect with clients. The chat and review system make it very professional.</p>
+                <strong>Imran K. — AC Technician</strong>
+              </div>
+            </div>
+
+            <div class="review-card">
+              <div class="review-avatar"></div>
+              <div class="review-content">
+                <div class="stars">
+                  <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                  <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                  <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                  <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                </div>
+                <p>Finally, an app made for local workers! Easy to post, easy to connect — I get real work daily now.</p>
+                <strong>Sneha R</strong>
+              </div>
+            </div>
+
+            <div class="review-card">
+              <div class="review-avatar"></div>
+              <div class="review-content">
+                <div class="stars">
+                  <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                  <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                  <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                  <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                </div>
+                <p>Got 5 new clients in my area within a week! All Rounder really helps small workers like me find real jobs easily.</p>
+                <strong>Rahul S. — Electrician</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section faq-section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="pill">FAQ</span>
+            <h2>Frequently Asked Questions</h2>
+            <p>Quick answers to the most common questions about All Rounder.</p>
+          </div>
+
+          <div class="faq-grid">
+            <div class="faq-item open">
+              <button class="faq-question" type="button">
+                <span>What is All Rounder?</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none"><path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <div class="faq-answer">
+                All Rounder is a platform that connects local professionals and workers with people who need real day-to-day services quickly and reliably.
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>Can I chat with professionals directly?</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none"><path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <div class="faq-answer">
+                Yes, once you connect with a professional, you can use our built-in chat system to discuss details, negotiate prices, and share locations directly.
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>How do I post a job?</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none"><path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <div class="faq-answer">
+                Simply create an account, click “Post Job,” add details like description, budget, photo, and location — and your job will be visible to nearby professionals.
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>How are service providers verified?</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none"><path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <div class="faq-answer">
+                We perform basic mobile verification and encourage providers to submit KYC documents. The review and rating system also ensures transparency and trust.
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>Is All Rounder free to use?</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none"><path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <div class="faq-answer">
+                Yes! Posting a job and browsing for professionals is completely free for users.
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>How do I find local professionals?</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="none"><path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <div class="faq-answer">
+                You can use our search feature or browse through specific service categories to find top-rated professionals right in your neighborhood.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-banner">
+        <div class="container cta-box">
+          <h2>Ready To Download</h2>
+          <p>Your next job or service is just one tap away — download now and get started.</p>
+          <div class="cta-actions">
+            <a class="store-button" href="https://play.google.com/store/apps/details?id=com.Allrounder.App" target="_blank" rel="noreferrer">
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M5.4 6.1C5.1 6.4 5 6.9 5 7.6V40.4C5 41.1 5.1 41.6 5.4 41.9L5.5 42L24.8 22.7L24.8 22.5V22.4L5.5 3L5.4 6.1Z" fill="#32A071"/><path d="M30.4 28.3L24.8 22.7L24.8 22.4L30.4 16.8L30.5 16.9L37.1 20.6C39 21.7 39 23.4 37.1 24.5L30.5 28.2L30.4 28.3Z" fill="#F8BA26"/><path d="M30.5 28.2L24.8 22.5L5.4 42C5.9 42.4 6.6 42.5 7.5 42L30.5 28.2Z" fill="#E8443B"/><path d="M30.5 16.9L7.5 3C6.6 2.5 5.9 2.6 5.4 3.1L24.8 22.5L30.5 16.9Z" fill="#1877F2"/></svg>
+              </span>
+              <span>
+                <small>Download Now</small>
+                <strong>Google Play</strong>
+              </span>
+            </a>
+
+            <div class="social-proof" style="color:#334155; background: rgba(255,255,255,0.35); padding: 8px 12px; border-radius: 999px;">
+              <strong>1.1k+</strong>
+              <div class="stars" aria-label="4 star rating">
+                <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+              </div>
+              <span>Active User</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <img src="public/LOGO.png" alt="AllRounder Logo" />
+            <div>
+              <strong>ALLROUNDER</strong>
+              <span>Connecting Skills with Needs</span>
+            </div>
+          </div>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div class="footer-policy">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-conditions.html">Terms &amp; Conditions</a>
+          </div>
+        </div>
+        <div class="footer-bottom">@allrounder. All Rights Reserved</div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
