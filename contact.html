@@ -25,7 +25,6 @@
           <a href="index.html">Home</a>
           <a href="about.html">About Us</a>
           <a href="terms-conditions.html">Terms &amp; Conditions</a>
-          <a href="privacy-policy.html">Privacy Policy</a>
           <a href="contact.html" class="active">Contact</a>
         </nav>
 
@@ -45,50 +44,46 @@
         <div class="container">
           <div class="contact-grid">
             <div>
-              <div class="map-box">
-                <button class="map-button">View Map</button>
-                <iframe src="https://www.google.com/maps?q=Chinsurah%20West%20Bengal&z=13&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Office Location Map"></iframe>
-              </div>
-
               <div class="contact-details">
                 <div>
-                  <h4>Office Address:</h4>
-                  <p><strong>Kolkata,</strong> Alinagar, Kaswara,<br />Near HDFC Bank, Chinsurah,<br />West Bengal 792792</p>
+                  <h4>Contact Us</h4>
+                  <p>We do not have a physical office yet. If you have a question, complaint, or need support, you can send your details directly through WhatsApp or Gmail below.</p>
                 </div>
                 <div>
                   <h4>WhatsApp Number:</h4>
                   <p><a href="https://wa.me/919330093620" target="_blank" rel="noreferrer">+91 9330093620</a></p>
                 </div>
                 <div>
-                  <h4>Mail Address:</h4>
-                  <p>support@allrounder.com<br />allrounder@gmail.com</p>
+                  <h4>Email Address:</h4>
+                  <p><a href="mailto:support@allrounder.com">support@allrounder.com</a><br /><a href="mailto:allrounder@gmail.com">allrounder@gmail.com</a></p>
                 </div>
               </div>
             </div>
 
             <div class="enquiry-card">
-              <h3>Online Enquiry</h3>
-              <p>We Work With Ambitious Leaders Who Want To Define The Future, Not Hide From It.</p>
+              <h3>Send Details</h3>
+              <p>Write your issue or message below and open it directly in WhatsApp or Gmail.</p>
 
-              <form class="form-grid">
+              <form class="form-grid" id="contactForm">
                 <div class="form-field">
                   <label>Full Name <span class="required">*</span></label>
-                  <input type="text" />
+                  <input id="fullName" type="text" required />
                 </div>
                 <div class="form-field">
                   <label>Email Address <span class="required">*</span></label>
-                  <input type="email" />
+                  <input id="emailAddress" type="email" required />
                 </div>
                 <div class="form-field">
                   <label>Mobile Number <span class="required">*</span></label>
-                  <input type="tel" />
+                  <input id="mobileNumber" type="tel" required />
                 </div>
                 <div class="form-field">
                   <label>Message <span class="required">*</span></label>
-                  <textarea rows="4"></textarea>
+                  <textarea id="message" rows="5" required></textarea>
                 </div>
-                <div class="submit-wrap">
-                  <button class="primary-btn" type="submit">Send us a massage</button>
+                <div class="submit-wrap" style="display:flex; flex-wrap:wrap; gap:12px;">
+                  <button class="primary-btn" type="submit">Open WhatsApp</button>
+                  <button class="primary-btn" type="button" id="gmailBtn">Open Gmail</button>
                 </div>
               </form>
             </div>
@@ -113,7 +108,6 @@
             <a href="contact.html">Contact</a>
           </div>
           <div class="footer-policy">
-            <a href="privacy-policy.html">Privacy Policy</a>
             <a href="terms-conditions.html">Terms &amp; Conditions</a>
           </div>
         </div>
@@ -122,5 +116,56 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+      const contactForm = document.getElementById('contactForm');
+      const fullNameInput = document.getElementById('fullName');
+      const emailInput = document.getElementById('emailAddress');
+      const mobileInput = document.getElementById('mobileNumber');
+      const messageInput = document.getElementById('message');
+      const gmailBtn = document.getElementById('gmailBtn');
+
+      function buildMessage() {
+        const fullName = fullNameInput.value.trim();
+        const email = emailInput.value.trim();
+        const mobile = mobileInput.value.trim();
+        const message = messageInput.value.trim();
+
+        return [
+          'Hello Allrounder,',
+          '',
+          'Full Name: ' + (fullName || 'N/A'),
+          'Email: ' + (email || 'N/A'),
+          'Mobile Number: ' + (mobile || 'N/A'),
+          '',
+          'Message:',
+          message || 'No message provided.'
+        ].join('\n');
+      }
+
+      function validateForm() {
+        if (!fullNameInput.value.trim() || !emailInput.value.trim() || !mobileInput.value.trim() || !messageInput.value.trim()) {
+          alert('Please complete all fields before sending your message.');
+          return false;
+        }
+        return true;
+      }
+
+      contactForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        if (!validateForm()) return;
+
+        const text = encodeURIComponent(buildMessage());
+        window.open('https://wa.me/919330093620?text=' + text, '_blank');
+      });
+
+      gmailBtn.addEventListener('click', function () {
+        if (!validateForm()) return;
+
+        const subject = encodeURIComponent('Allrounder Support Request');
+        const body = encodeURIComponent(buildMessage());
+        const gmailUrl = 'https://mail.google.com/mail/?view=cm&fs=1&to=support@allrounder.com&su=' + subject + '&body=' + body;
+        window.open(gmailUrl, '_blank');
+      });
+    </script>
   </body>
 </html>
